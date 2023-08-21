@@ -50,30 +50,30 @@ namespace Photo_Studio
             {
                 case "Menu":
                     homeButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
-                    reservationButton.Background = null;
-                    serviceButton.Background = null;
-                    //reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
+                    reservationButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
+                    serviceButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
+                    reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     break;
 
                 case "Reservation":
                     homeButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     reservationButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
                     serviceButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    //reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
+                    reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     break;
 
                 case "Service":
                     homeButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     reservationButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     serviceButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
-                   // reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
+                    reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     break;
 
                 case "Report":
                     homeButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     reservationButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
                     serviceButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    //reportButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
+                    reportButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
                     break;
             }
         }
