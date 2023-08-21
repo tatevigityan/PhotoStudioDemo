@@ -46,36 +46,17 @@ namespace Photo_Studio
 
         private void menuItemColor(string ListViewItem)
         {
-            switch (ListViewItem)
+            var colors = new SolidColorBrush[]
             {
-                case "Menu":
-                    homeButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
-                    reservationButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    serviceButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    break;
+                new SolidColorBrush(Color.FromRgb(113, 99, 186)),
+                new SolidColorBrush(Color.FromRgb(90, 80, 128))
+            };
 
-                case "Reservation":
-                    homeButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    reservationButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
-                    serviceButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    break;
+            var buttons = new[] { homeButton, reservationButton, serviceButton, reportButton };
+            var names = new[] { "Menu", "Reservation", "Service", "Report" };
 
-                case "Service":
-                    homeButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    reservationButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    serviceButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
-                    reportButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    break;
-
-                case "Report":
-                    homeButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    reservationButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    serviceButton.Background = new SolidColorBrush(Color.FromRgb(113, 99, 186));
-                    reportButton.Background = new SolidColorBrush(Color.FromRgb(90, 80, 128));
-                    break;
-            }
+            for (int i = 0; i < buttons.Length; i++)
+                buttons[i].Background = colors[ListViewItem == names[i] ? 1 : 0];
         }
     }
 }
